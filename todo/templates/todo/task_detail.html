@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+  <div class="card-header">
+    {{task.taskName}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{task.created_at}}</h5>
+    <p class="card-text">{{task.description}}</p>
+    <a href="{% url 'taskDelete' task.pk %}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+    <a href="{% url 'taskList' %}" class="btn btn-primary"><i class="fa-solid fa-backward"></i></a>
+  </div>
+</div>
+{% endblock %}
+
+
